@@ -55,7 +55,7 @@
     </head>
     <header><center><h1>INST 377 Final Project: Game Tracker</h1></center></header>
 
-    <body onload="top_paid()">
+    <body onload="top_paid(); return false">
         <nav id="main-nav">
             <ul>
                 <li> <a href="home.html">Home</a> </li>
@@ -66,15 +66,16 @@
         <center><h2><strong>Paid Games</strong></h2></center>
 
         <div class="block" id="options">
-            <form id="paid" onsubmit="">
-                <label for="upperPrice">Upper Price Limit: </label>
-                <input type="text" id="upperPrice" name="upperPrice">
+            <form id="paid" onsubmit="sorted_games(this.upperPrice.value, this.lowerPrice.value, this.sortby.value); return false">
+                <label for="upperPrice">Upper Price Limit (whole dollars only): </label>
+                <input type="number" min=0 id="upperPrice" name="upperPrice">
     
-                <label for="lowerPrice">Lowest Price Limit: </label>
-                <input for="lowerPrice" id="lowerPrice" name="lowerPrice">
+                <label for="lowerPrice">Lowest Price Limit (whole dollars only): </label>
+                <input type="number" min=0 id="lowerPrice" name="lowerPrice">
     
                 <label for="sortby">Sort By: </label>
                 <select name="sortby" id="sortby">
+                    <option value="No">No Sort</option>
                     <option value="Deal Rating">Deal Rating</option>
                     <option value="Title">Title</option>
                     <option value="Price">Price</option>
@@ -85,10 +86,10 @@
                 <br>
                 <input type="submit" value="Submit">
             </form>
-
-
-
         </div>
+        
+        <table id="sorted_games"; class="chartcs"></table>
+
 
         <br>
 

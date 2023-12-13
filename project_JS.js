@@ -86,3 +86,9 @@ function top_paid() {
 }
 
 // Creates Table of Games with form submitted settings
+function sorted_games(upper, lower, sort) {
+    console.log(upper, lower, sort)
+    ups = `&upperPrice=${upper}`
+    lups = `&lowerPrice=${lower}`
+    sups = `&sortBy=${sort}`
+}
