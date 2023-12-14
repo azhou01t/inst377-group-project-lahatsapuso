@@ -120,7 +120,7 @@ function sorted_games(upper, lower, sort) {
     tbl.innerHTML = "";
 
     const info = document.getElementById('info_block')
-    info.innerHTML = "Sorted Tables"
+    info.innerHTML = "Sorted Table"
 
 
     const tblBody = document.createElement('tbody');
