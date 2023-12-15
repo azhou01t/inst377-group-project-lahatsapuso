@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  background-color: #f9858b;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+header {
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#main-title {
+  cursor: pointer;
+}
+
+#main-nav {
+  text-align: center;
+}
+
+#main-nav ul {
+  background-color: #761137;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav li {
+  margin: 0 10px;
+}
+
+#main-nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#main-nav li a:hover {
+  background-color: pink;
+  color: #761137;
+}
+
+.highlight {
+  color: #761137;
+  font-weight: bold;
+}
+
+#about-content {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  animation: slideUp 1s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.section-header h2 {
+  font-family: "Press Start 2P", cursive;
+  color: #761137;
+  text-align: center;
+  background-color: #ffcdc2;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section-body {
+  background-color: #fff3f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  background-color: #ffcdc2;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.feature-title {
+  font-weight: bold;
+  color: #761137;
+}
+
+.closing-remark {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+button {
+  background-color: #761137;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #a8325e;
+}
+
+.hidden {
+  display: none;
+}
