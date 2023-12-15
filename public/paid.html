@@ -63,10 +63,10 @@
                 <li> <a href="free.html">Free Games</a> </li>
             </ul>
         </nav>
-        <center><h2><strong>Paid Games</strong></h2></center>
+        <center><h2><strong>Paid Games (PC Only)</strong></h2></center>
 
         <div class="block" id="options">
-            <form id="paid" onsubmit="">
+            <form id="paid" onsubmit="sorted_games(this.upperPrice.value, this.lowerPrice.value, this.sortby.value); return false">
                 <label for="upperPrice">Upper Price Limit: </label>
                 <input type="text" id="upperPrice" name="upperPrice">
     
@@ -76,14 +76,15 @@
                 <label for="sortby">Sort By: </label>
                 <select name="sortby" id="sortby">
                     <option value="Deal Rating">Deal Rating</option>
-                    <option value="Title">Title</option>
-                    <option value="Price">Price</option>
+                    <option value="Price">Lowest Price</option> 
                     <option value="Recent">Recent</option>
                     <option value="Release">Release Date</option>
                     <option value="Reviews">Reviews</option>
+                    <option value="Title">Title</option>
+                         
                 </select>
                 <br>
-                <input type="submit" value="Submit">
+                <center><button class="button-2" role="button" value="Submit">Sort</button></center> 
             </form>
 
 
@@ -100,6 +101,12 @@
                 <strong>Deal Rating: </strong><p>Rating of Deal</p><br>
                 <strong>Steam Rating: </strong><p>Steam Rating of Deal</p><br>
             </div>
+
+            <br>
+            <div class="block">
+                <center><h3 id="info_block"></h3></center>
+            </div>
+            <br>
 
             <table id="gamedeals"; class="chartcs"></table>
         </div>
