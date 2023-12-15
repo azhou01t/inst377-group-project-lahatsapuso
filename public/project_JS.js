@@ -87,6 +87,29 @@ function top_paid() {
 
 // Creates Table of Games with form submitted settings
 function sorted_games(upper, lower, sort) {
+    let search_prompt = "https://www.cheapshark.com/api/1.0/deals?&pageSize=15";
+    
+    const params = [
+        ["upperPrice", upper],
+        ["lowerPrice", lower],
+        ["sortBy", sort]
+    ];
+    console.log(params);
+
+    for (const value of params) {
+        if (value[1] == '') {
+            console.log('Value Empty', value);
+        } else if (value[1] == "No") {
+            console.log("No Sort Method");
+        } else {
+            console.log(`User Inputted: ${value}`);
+            search_prompt += `&${value[0]}=${value[1]}`;
+            console.log(search_prompt);
+        }
+    };
+    
+
+    //Chart Maker 
     let tbl = document.getElementById("sorted_games");
     const topgames = document.getElementById('gamedeals')
 
@@ -94,7 +117,7 @@ function sorted_games(upper, lower, sort) {
     tbl.innerHTML = "";
 
     const info = document.getElementById('info_block')
-    info.innerHTML = "Sorted Tables"
+    info.innerHTML = "Sorted Table"
 
 
     const tblBody = document.createElement('tbody');
