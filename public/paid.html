@@ -51,7 +51,7 @@
                 width: 70%;
             }
         </style>
-        <script defer type="text/javascript" src="project_JS.js"></script>
+        <script defer type="text/javascript" src="js/about.js"></script>
     </head>
     <header><center><h1>INST 377 Final Project: Game Tracker</h1></center></header>
 
@@ -78,19 +78,15 @@
                     <option value="Deal Rating">Deal Rating</option>
                     <option value="Price">Lowest Price</option> 
                     <option value="Recent">Recent</option>
-                    <option value="Release">Release Date</option>
                     <option value="Reviews">Reviews</option>
                     <option value="Title">Title</option>
-                         
                 </select>
                 <br>
                 <center><button class="button-2" role="button" value="Submit">Sort</button></center> 
             </form>
-
-
-
         </div>
-
+        
+        <table id="sorted_games"; class="chartcs"></table>
         <br>
 
         <div>
@@ -104,7 +100,7 @@
 
             <br>
             <div class="block">
-                <center><h3 id="info_block"></h3></center>
+                <center><h3 id="info_block">Top Five Games On Sale</h3></center>
             </div>
             <br>
             <table id="gamedeals"; class="chartcs"></table>

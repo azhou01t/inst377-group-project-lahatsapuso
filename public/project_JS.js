@@ -15,7 +15,7 @@ function top_paid() {
     cell3.innerHTML = "Deal Rating"
     cell4.innerHTML = "Steam Rating"
     
-    fetch(`https://www.cheapshark.com/api/1.0/deals?pageSize=5&sortBy=Savings`)
+    fetch(`https://www.cheapshark.com/api/1.0/deals?pageSize=5&sortBy=dealRating`)
         .then((res) => res.json())
         .then((res) => {
             console.log('unedited', res)
@@ -84,16 +84,20 @@ function top_paid() {
         });
     
 }
+function testingTest() {
+    console.log("Successful")
+}
 
 // Creates Table of Games with form submitted settings
 function sorted_games(upper, lower, sort) {
+    console.log("Form submitted")
     let search_prompt = "https://www.cheapshark.com/api/1.0/deals?&pageSize=15";
     
     const params = [
         ["upperPrice", upper],
         ["lowerPrice", lower],
-        ["sortBy", sort]
-    ];
+        ["sortBy", sort]];
+
     console.log(params);
 
     for (const value of params) {
