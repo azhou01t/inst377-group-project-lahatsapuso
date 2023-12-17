@@ -26,7 +26,11 @@ REQUIRED SECTION [
 ]
 
 ### Installation Guide
-[Not sure what to add here]
+Instructions found on Discord[ 
+Install dependencies (do this after you clone the repo): npm i
+- Start the web application: npm start
+- Stop the web application: CTRL + C in your terminal
+]
 
 ### Software Testing
 [Haven't deployed yet so not sure]
