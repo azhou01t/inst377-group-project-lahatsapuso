@@ -24,6 +24,13 @@ REQUIRED SECTION [
 * A clear set of expectations around known bugs and a road-map for * future development.
 
 ]
+
+### Installation Guide
+[Not sure what to add here]
+
+### Software Testing
+[Haven't deployed yet so not sure]
+
 ### API's Used: 
 - [Supabase Database: A free and open source database.](https://supabase.com/docs/guides/database/overview)
 - [CheapShark: A price comparison website for digital PC Games.](https://apidocs.cheapshark.com/)
